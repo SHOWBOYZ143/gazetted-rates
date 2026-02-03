@@ -4,7 +4,6 @@ import base64
 import os
 from dataclasses import dataclass
 from typing import List
-
 # ---------------------------------------------------------
 # 1. HELPER: LOAD LOGO SAFELY
 # ---------------------------------------------------------
