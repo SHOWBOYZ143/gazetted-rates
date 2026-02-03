@@ -167,7 +167,7 @@ st.markdown(css_code, unsafe_allow_html=True)
 # --- SIDEBAR ---
 with st.sidebar:
     if logo_b64: st.markdown(f'<div style="text-align: center;"><img src="data:image/png;base64,{logo_b64}" width="80"></div>', unsafe_allow_html=True)
-    st.markdown("<p style='font-size:0.95rem; font-weight:900; margin-top:10px;'>⚙️ CONFIG</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:0.95rem; font-weight:900; margin-top:10px;'></p>", unsafe_allow_html=True)
     sel_year = st.selectbox("Fiscal Year:", sorted(list(TARIFFS.keys()), reverse=True))
     sel_period = st.selectbox("Period:", sorted(list(TARIFFS[sel_year].keys())))
     st.markdown("<hr style='border: 0.5px solid rgba(255,255,255,0.1); margin:10px 0;'>", unsafe_allow_html=True)
@@ -213,7 +213,7 @@ with main_col1:
     """, unsafe_allow_html=True)
 
 with main_col2:
-    st.markdown("<h3 style='color:white; margin: 0px 0 10px 0; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:5px; font-size:1.1rem;'>🧾 BILL BREAKDOWN</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:white; margin: 0px 0 10px 0; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:5px; font-size:1.1rem;'>BILL BREAKDOWN</h3>", unsafe_allow_html=True)
     
     is_old_era = int(sel_year) < 2007 or (sel_year == "2007" and sel_period in ["Jan 1", "Apr 1"])
     if is_old_era:
