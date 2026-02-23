@@ -334,7 +334,7 @@ st.markdown("<p class='sub-header'>GAZETTED TARIFFS</p>", unsafe_allow_html=True
 # Input Controls Row
 c1, c2, c3, c4, c5 = st.columns(5)
 with c1:
-    sel_year = st.selectbox("Fiscal Year:", sorted(list(TARIFFS.keys()), reverse=True))
+    sel_year = st.selectbox("Tariff Control Period:", sorted(list(TARIFFS.keys()), reverse=True))
 
 with c2:
     q_list = list(TARIFFS[sel_year].keys()) if TARIFFS[sel_year] else ["NO DATA"]
@@ -371,7 +371,7 @@ if valid_selection:
     # Result Display Row
     r1, r2 = st.columns([1, 1])
     with r1:
-        title = "TOTAL ESTIMATED BILL (GHS)" if calc_mode == "Bill from kWh" else "REQUIRED CONSUMPTION (kWh)"
+        title = "TOTAL BILL (GHS)" if calc_mode == "Bill from kWh" else "REQUIRED CONSUMPTION (kWh)"
         v = res.total_payable if calc_mode == "Bill from kWh" else display_val
         
         st.markdown(f'<div style="font-size: 20px; font-weight: 800; color: #ef4444; margin-top: 30px; margin-bottom: 10px;">{title}</div>', unsafe_allow_html=True)
